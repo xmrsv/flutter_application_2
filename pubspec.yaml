@@ -39,6 +39,9 @@ dependencies:
   flutter_bloc: ^8.1.6
   rxdart: ^0.28.0
   fluttertoast: ^8.2.8
+  http: ^1.2.2
+  get_it: ^7.7.0
+  injectable: ^2.4.4
 
 dev_dependencies:
   flutter_test:
