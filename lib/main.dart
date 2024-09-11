@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/injection.dart';
 import 'package:flutter_application_2/src/presentation/page/auth/login/LoginPage.dart';
 import 'package:flutter_application_2/src/presentation/page/auth/register/RegisterPage.dart';
 import 'package:flutter_application_2/src/presentation/page/client/home/ClientHomePage.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies();
   runApp(const MyApp());
 }
 
