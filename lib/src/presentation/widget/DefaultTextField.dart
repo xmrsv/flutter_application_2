@@ -11,6 +11,7 @@ class DefaultTextField extends StatelessWidget {
   final String? Function(String?)? validator;
 
   DefaultTextField({
+    Key? key,
     required this.label,
     this.errorText,
     this.textInputType,
@@ -19,7 +20,7 @@ class DefaultTextField extends StatelessWidget {
     this.color = Colors.white,
     required this.onChanged,
     this.obscureText = false,
-  });
+  }): super (key: key);
 
   @override
   Widget build(BuildContext context) {
