@@ -1,6 +1,6 @@
 import 'package:equatable/equatable.dart';
-import 'package:shopyfile_v1/src/domain/models/AuthResponse.dart';
-import 'package:shopyfile_v1/src/presentation/pages/utils/BlocFormItem.dart';
+import 'package:flutter_application_2/src/domain/models/AuthResponse.dart';
+import 'package:flutter_application_2/src/presentation/pages/utils/BlocFormItem.dart';
 
 abstract class LoginEvent extends Equatable {
   const LoginEvent();

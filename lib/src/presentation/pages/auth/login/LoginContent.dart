@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:shopyfile_v1/src/presentation/pages/auth/login/bloc/LoginBloc.dart';
-import 'package:shopyfile_v1/src/presentation/pages/auth/login/bloc/LoginEvent.dart';
-import 'package:shopyfile_v1/src/presentation/pages/auth/login/bloc/LoginState.dart';
-import 'package:shopyfile_v1/src/presentation/pages/utils/BlocFormItem.dart';
-import 'package:shopyfile_v1/src/presentation/widget/DefaultTextField.dart';
+import 'package:flutter_application_2/src/presentation/pages/auth/login/bloc/LoginBloc.dart';
+import 'package:flutter_application_2/src/presentation/pages/auth/login/bloc/LoginEvent.dart';
+import 'package:flutter_application_2/src/presentation/pages/auth/login/bloc/LoginState.dart';
+import 'package:flutter_application_2/src/presentation/pages/utils/BlocFormItem.dart';
+import 'package:flutter_application_2/src/presentation/widget/DefaultTextField.dart';
 class LoginContent extends StatelessWidget {
   LoginBloc? bloc;
   LoginState state;
 
-  LoginContent(this.bloc, this.state);
+  LoginContent(this.bloc, this.state, {super.key});
 
   @override
   Widget build(BuildContext context) {

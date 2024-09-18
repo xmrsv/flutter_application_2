@@ -1,5 +1,5 @@
-import 'package:shopyfile_v1/src/domain/useCases/auth/LoginUseCase.dart';
-import 'package:shopyfile_v1/src/domain/useCases/auth/RegisterUseCase.dart';
+import 'package:flutter_application_2/src/domain/useCases/auth/LoginUseCase.dart';
+import 'package:flutter_application_2/src/domain/useCases/auth/RegisterUseCase.dart';
 
 class AuthUseCases {
 LoginUseCase login;

@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
-import 'package:shopyfile_v1/src/domain/utils/Resource.dart';
-import 'package:shopyfile_v1/src/presentation/pages/utils/BlocFormItem.dart';
+import 'package:flutter_application_2/src/domain/utils/Resource.dart';
+import 'package:flutter_application_2/src/presentation/pages/utils/BlocFormItem.dart';
 
 class LoginState extends Equatable {
   final BlocFormItem email;

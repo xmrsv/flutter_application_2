@@ -1,4 +1,4 @@
-import 'package:shopyfile_v1/src/domain/repository/AuthRepository.dart';
+import 'package:flutter_application_2/src/domain/repository/AuthRepository.dart';
 
 class LoginUseCase {
  

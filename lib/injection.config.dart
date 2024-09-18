@@ -10,12 +10,12 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
-import 'package:shopyfile_v1/src/data/dataSource/remote/AuthService.dart'
+import 'package:flutter_application_2/src/data/dataSource/remote/AuthService.dart'
     as _i68;
-import 'package:shopyfile_v1/src/di/AppModule.dart' as _i1012;
-import 'package:shopyfile_v1/src/domain/repository/AuthRepository.dart'
+import 'package:flutter_application_2/src/di/AppModule.dart' as _i1012;
+import 'package:flutter_application_2/src/domain/repository/AuthRepository.dart'
     as _i558;
-import 'package:shopyfile_v1/src/domain/useCases/auth/AuthUseCases.dart'
+import 'package:flutter_application_2/src/domain/useCases/auth/AuthUseCases.dart'
     as _i377;
 
 extension GetItInjectableX on _i174.GetIt {

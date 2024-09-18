@@ -1,6 +1,6 @@
-import 'package:shopyfile_v1/src/domain/models/AuthResponse.dart';
-import 'package:shopyfile_v1/src/domain/models/User.dart';
-import 'package:shopyfile_v1/src/domain/utils/Resource.dart';
+import 'package:flutter_application_2/src/domain/models/AuthResponse.dart';
+import 'package:flutter_application_2/src/domain/models/User.dart';
+import 'package:flutter_application_2/src/domain/utils/Resource.dart';
 
 abstract class AuthRepository {
   Future<AuthResponse?> getUserSession();

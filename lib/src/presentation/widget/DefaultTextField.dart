@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 
 class DefaultTextField extends StatelessWidget {
- final String label;
- final String? errorText;
- TextInputType ? textInputType;
- Color ? color;
- final IconData icon;
- final bool obscureText;
- final Function(String text) onChanged;
- final String? Function (String?)? validator;
-
+  final String label;
+  final String? errorText;
+  TextInputType? textInputType;
+  Color? color;
+  final IconData icon;
+  final bool obscureText;
+  final Function(String text) onChanged;
+  final String? Function(String?)? validator;
 
   DefaultTextField({
     required this.label,
@@ -26,23 +25,22 @@ class DefaultTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       obscureText: obscureText,
-      onChanged: (text){
+      onChanged: (text) {
         onChanged(text);
       },
       keyboardType: textInputType,
       validator: validator,
       decoration: InputDecoration(
-          label: Text(label, style: TextStyle(color: color)
-          ),
-           errorText : errorText,
+          label: Text(label, style: TextStyle(color: color)),
+          errorText: errorText,
           prefixIcon: Icon(
             icon,
             color: color,
           ),
           enabledBorder:
               UnderlineInputBorder(borderSide: BorderSide(color: color!)),
-          focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: color!))),
+          focusedBorder:
+              UnderlineInputBorder(borderSide: BorderSide(color: color!))),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopyfile_v1/src/presentation/widget/DefaultIconBack.dart';
-import 'package:shopyfile_v1/src/presentation/widget/DefaultTextField.dart';
+import 'package:flutter_application_2/src/presentation/widget/DefaultIconBack.dart';
+import 'package:flutter_application_2/src/presentation/widget/DefaultTextField.dart';
 class RegisterPage extends StatelessWidget {
   const RegisterPage({super.key});
 
@@ -49,7 +49,7 @@ class RegisterPage extends StatelessWidget {
                   label: 'Nombre',
                    icon: Icons.person, 
                    onChanged: (text){
-                    print('Text:${text}');
+                    print('Text:$text');
                    }),
               ),
               Container(
@@ -58,7 +58,7 @@ class RegisterPage extends StatelessWidget {
                   label: 'Email',
                    icon: Icons.email, 
                    onChanged: (text){
-                    print('Text:${text}');
+                    print('Text:$text');
                    }), 
               ),
                Container(
@@ -67,7 +67,7 @@ class RegisterPage extends StatelessWidget {
                   label: 'Telefono',
                    icon: Icons.phone, 
                    onChanged: (text){
-                    print('Text:${text}');
+                    print('Text:$text');
                    }),
               ),
                Container(
@@ -76,7 +76,7 @@ class RegisterPage extends StatelessWidget {
                   label: 'Contraseña',
                    icon: Icons.lock, 
                    onChanged: (text){
-                    print('Text:${text}');
+                    print('Text:$text');
                    },
                    obscureText: true),
               ),
@@ -86,7 +86,7 @@ class RegisterPage extends StatelessWidget {
                   label: 'Confirmar Contraseña',
                    icon: Icons.lock_outlined, 
                    onChanged: (text){
-                    print('Text:${text}');
+                    print('Text:$text');
                    },
                    obscureText: true),
               ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:shopyfile_v1/src/domain/useCases/auth/AuthUseCases.dart';
-import 'package:shopyfile_v1/src/domain/utils/Resource.dart';
-import 'package:shopyfile_v1/src/presentation/pages/auth/login/bloc/LoginEvent.dart';
-import 'package:shopyfile_v1/src/presentation/pages/auth/login/bloc/LoginState.dart';
-import 'package:shopyfile_v1/src/presentation/pages/utils/BlocFormItem.dart';
+import 'package:flutter_application_2/src/domain/useCases/auth/AuthUseCases.dart';
+import 'package:flutter_application_2/src/domain/utils/Resource.dart';
+import 'package:flutter_application_2/src/presentation/pages/auth/login/bloc/LoginEvent.dart';
+import 'package:flutter_application_2/src/presentation/pages/auth/login/bloc/LoginState.dart';
+import 'package:flutter_application_2/src/presentation/pages/utils/BlocFormItem.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
   AuthUseCases authUseCases;

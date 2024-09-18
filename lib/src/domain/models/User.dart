@@ -1,4 +1,4 @@
-import 'package:shopyfile_v1/src/domain/models/Role.dart';
+import 'package:flutter_application_2/src/domain/models/Role.dart';
 
 class User {
     int? id;

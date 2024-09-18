@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:shopyfile_v1/src/domain/models/AuthResponse.dart';
-import 'package:shopyfile_v1/src/domain/utils/Resource.dart';
-import 'package:shopyfile_v1/src/presentation/pages/auth/login/LoginContent.dart';
-import 'package:shopyfile_v1/src/presentation/pages/auth/login/bloc/LoginBloc.dart';
-import 'package:shopyfile_v1/src/presentation/pages/auth/login/bloc/LoginState.dart';
+import 'package:flutter_application_2/src/domain/models/AuthResponse.dart';
+import 'package:flutter_application_2/src/domain/utils/Resource.dart';
+import 'package:flutter_application_2/src/presentation/pages/auth/login/LoginContent.dart';
+import 'package:flutter_application_2/src/presentation/pages/auth/login/bloc/LoginBloc.dart';
+import 'package:flutter_application_2/src/presentation/pages/auth/login/bloc/LoginState.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -27,7 +27,7 @@ class _LoginPageState extends State<LoginPage> {
     _bloc = BlocProvider.of<LoginBloc>(context);
 
     return Scaffold(
-        body: Container(
+        body: SizedBox(
       width: double.infinity,
       child: BlocListener<LoginBloc, LoginState>(listener: (context, state) {
         final responseState = state.response;
