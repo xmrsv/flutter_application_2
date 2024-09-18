@@ -1,10 +1,7 @@
-// To parse this JSON data, do
-//
-//     final authResponse = authResponseFromJson(jsonString);
 
 import 'dart:convert';
 
-import 'package:flutter_application_2/src/domain/models/User.dart';
+import 'package:shopyfile_v1/src/domain/models/User.dart';
 
 AuthResponse authResponseFromJson(String str) => AuthResponse.fromJson(json.decode(str));
 

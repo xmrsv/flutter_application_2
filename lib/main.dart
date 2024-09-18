@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_2/injection.dart';
-import 'package:flutter_application_2/src/presentation/page/auth/login/LoginPage.dart';
-import 'package:flutter_application_2/src/presentation/page/auth/register/RegisterPage.dart';
-import 'package:flutter_application_2/src/presentation/page/client/home/ClientHomePage.dart';
+import 'package:shopyfile_v1/injection.dart';
+import 'package:shopyfile_v1/src/presentation/pages/auth/login/LoginContent.dart';
+import 'package:shopyfile_v1/src/presentation/pages/auth/login/LoginPage.dart';
+import 'package:shopyfile_v1/src/presentation/pages/auth/register/RegisterPage.dart';
+import 'package:shopyfile_v1/src/presentation/pages/client/home/ClientHomePage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await configureDependencies();
+  await configureDependencies(); //para la inyeccion de dependencia
   runApp(const MyApp());
 }
 
@@ -20,14 +21,14 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
         useMaterial3: true,
       ),
       initialRoute: 'login',
       routes: {
-        "login": (BuildContext context) => const LoginPage(),
-        "register": (BuildContext context) => const RegisterPage(),
-        "client/home": (BuildContext context) => const ClientHomePage(),
+        'login': (BuildContext context) => LoginPage(),
+        'register': (BuildContext context) => RegisterPage(),
+        'client/home': (BuildContext context) => ClientHomePage()
       },
     );
   }

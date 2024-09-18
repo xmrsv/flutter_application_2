@@ -1,39 +1,48 @@
 import 'package:flutter/material.dart';
 
 class DefaultTextField extends StatelessWidget {
-  String label;
-  IconData icon;
-  bool obscureText;
+ final String label;
+ final String? errorText;
+ TextInputType ? textInputType;
+ Color ? color;
+ final IconData icon;
+ final bool obscureText;
+ final Function(String text) onChanged;
+ final String? Function (String?)? validator;
 
-  Function(String text) onChange;
 
-  DefaultTextField(
-      {super.key,
-      required this.label,
-      required this.icon,
-      required this.onChange,
-      this.obscureText = false});
+  DefaultTextField({
+    required this.label,
+    this.errorText,
+    this.textInputType,
+    this.validator,
+    required this.icon,
+    this.color = Colors.white,
+    required this.onChanged,
+    this.obscureText = false,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
       obscureText: obscureText,
-      onChanged: (text) {
-        onChange(text);
+      onChanged: (text){
+        onChanged(text);
       },
+      keyboardType: textInputType,
+      validator: validator,
       decoration: InputDecoration(
-          label: Text(
-            label,
-            style: TextStyle(color: Colors.white),
+          label: Text(label, style: TextStyle(color: color)
           ),
+           errorText : errorText,
           prefixIcon: Icon(
             icon,
-            color: Colors.white,
+            color: color,
           ),
           enabledBorder:
-              UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
+              UnderlineInputBorder(borderSide: BorderSide(color: color!)),
           focusedBorder: UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.white))),
+              borderSide: BorderSide(color: color!))),
     );
   }
 }
