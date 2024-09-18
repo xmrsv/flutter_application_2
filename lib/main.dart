@@ -6,6 +6,7 @@ import 'package:flutter_application_2/src/presentation/pages/auth/register/Regis
 import 'package:flutter_application_2/src/presentation/pages/blocProviders.dart';
 import 'package:flutter_application_2/src/presentation/pages/client/home/ClientHomePage.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: blocProviders,
       child: MaterialApp(
+        builder: FToastBuilder(),
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(

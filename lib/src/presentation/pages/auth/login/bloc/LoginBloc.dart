@@ -48,7 +48,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
         email: BlocFormItem(
             value: event.password.value,
             error:
-                event.password.value.isEmpty && event.password.value.length >= 8
+                event.password.value.isEmpty && event.password.value.length >= 6
                     ? null
                     : 'Ingrese la contraseña'),
         formKey: formKey));
@@ -57,6 +57,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   Future<void> _onLoginSubmit(
       LoginSubmit event, Emitter<LoginState> emit) async {
     emit(state.copyWith(response: Loading(), formKey: formKey));
+
+    await Future.delayed(Duration(seconds: 6));
+
     Resource response =
         await authUseCases.login.run(state.email.value, state.password.value);
 

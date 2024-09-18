@@ -5,6 +5,7 @@ import 'package:flutter_application_2/src/presentation/pages/auth/login/bloc/Log
 import 'package:flutter_application_2/src/presentation/pages/auth/login/bloc/LoginState.dart';
 import 'package:flutter_application_2/src/presentation/pages/utils/BlocFormItem.dart';
 import 'package:flutter_application_2/src/presentation/widget/DefaultTextField.dart';
+
 class LoginContent extends StatelessWidget {
   LoginBloc? bloc;
   LoginState state;
@@ -109,37 +110,40 @@ class LoginContent extends StatelessWidget {
 
   Widget _buttonLogin(BuildContext context) {
     return Container(
-        width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.only(left: 25, right: 25, top: 25, bottom: 15),
-        child: ElevatedButton(
-            onPressed: () {
-              if (state.formKey!.currentState!.validate()) {
-                bloc?.add(LoginSubmit());
-              } else {
-                Fluttertoast.showToast(
-                    msg: 'El formulario jijja xd',
-                    toastLength: Toast.LENGTH_LONG);
-              }
-            },
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-            child: Text(
-              'Iniciar Sesion',
-              style: TextStyle(color: Colors.white),
-            )));
+      width: MediaQuery.of(context).size.width,
+      margin: EdgeInsets.only(left: 25, right: 25, top: 25, bottom: 15),
+      child: ElevatedButton(
+        onPressed: () {
+          if (state.formKey!.currentState!.validate()) {
+            bloc?.add(LoginSubmit());
+          } else {
+            Fluttertoast.showToast(
+                msg: 'El formulario jijja xd', toastLength: Toast.LENGTH_LONG);
+          }
+        },
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+        child: Text(
+          'Iniciar Sesion',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
   }
 
   Widget _buttonRegister(BuildContext context) {
     return Container(
-        width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.only(left: 25, right: 25, top: 25, bottom: 15),
-        child: ElevatedButton(
-            onPressed: () {
-              Navigator.pushNamed(context, 'register');
-            },
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
-            child: Text(
-              'Register',
-              style: TextStyle(color: Colors.white),
-            )));
+      width: MediaQuery.of(context).size.width,
+      margin: EdgeInsets.only(left: 25, right: 25, top: 25, bottom: 15),
+      child: ElevatedButton(
+        onPressed: () {
+          Navigator.pushNamed(context, 'register');
+        },
+        style: ElevatedButton.styleFrom(backgroundColor: Colors.black),
+        child: Text(
+          'Register',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
   }
 }

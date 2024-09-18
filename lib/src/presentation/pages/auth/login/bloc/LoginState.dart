@@ -7,20 +7,21 @@ class LoginState extends Equatable {
   final BlocFormItem email;
   final BlocFormItem password;
   final Resource? response;
-  final GlobalKey <FormState>? formKey;
+  final GlobalKey<FormState>? formKey;
 
-  const LoginState ({
-    this.email = const BlocFormItem( error: 'Ingreser su email'),
-    this.password = const BlocFormItem( error: 'Ingreser su password'),
+  const LoginState({
+    this.email = const BlocFormItem(error: 'Ingreser su email'),
+    this.password = const BlocFormItem(error: 'Ingreser su password'),
     this.formKey,
     this.response,
   });
 
-  LoginState copyWith ({
+  LoginState copyWith({
     BlocFormItem? email,
     BlocFormItem? password,
-    Resource? response, required GlobalKey<FormState> formKey,
-  }){
+    Resource? response,
+    required GlobalKey<FormState> formKey,
+  }) {
     return LoginState(
       email: email ?? this.email,
       password: password ?? this.password,
@@ -30,6 +31,5 @@ class LoginState extends Equatable {
   }
 
   @override
-
   List<Object?> get props => [email, password, response];
 }

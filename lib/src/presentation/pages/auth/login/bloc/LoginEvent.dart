@@ -5,7 +5,7 @@ import 'package:flutter_application_2/src/presentation/pages/utils/BlocFormItem.
 abstract class LoginEvent extends Equatable {
   const LoginEvent();
 
-  @override 
+  @override
   List<Object> get props => [];
 }
 
@@ -43,7 +43,6 @@ class PasswordChange extends LoginEvent {
 class LoginSubmit extends LoginEvent {
   const LoginSubmit();
 }
-
 
 class LoginFormReset extends LoginEvent {
   const LoginFormReset();
